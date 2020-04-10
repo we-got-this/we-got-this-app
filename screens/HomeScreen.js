@@ -9,13 +9,49 @@ import ChatBot from 'react-native-chatbot-expo';
 const steps = [
   {
     id: '0',
-    message: 'Welcome to react chatbot!',
+    message: 'G\'day',
     trigger: '1',
   },
   {
     id: '1',
-    message: 'Bye!',
-    end: false,
+    message: 'Name a friend or family member you spoke to recently',
+    trigger: '2',
+  },
+  {
+    id: '2',
+    user: true,
+    trigger: '3',
+  },
+  {
+    id: '3',
+    message: 'How did you feel after talking to them?',
+    trigger: '4',
+  },
+  {
+    id: '4',
+    options: [
+      { value: 1, label: 'Great', trigger: '5' },
+      { value: 2, label: 'No different', trigger: '5' },
+      { value: 3, label: 'Depressed af', trigger: '5' },
+    ],
+  },
+  {
+    id: '5',
+    message: 'How do you think they felt after talking to you?',
+    trigger: '6',
+  },
+  {
+    id: '6',
+    options: [
+      { value: 1, label: 'Great', trigger: '7' },
+      { value: 2, label: 'No different', trigger: '7' },
+      { value: 3, label: 'Depressed af', trigger: '7' },
+    ],
+  },
+  {
+    id: '7',
+    message: 'Okay, great.',
+    trigger: '1',
   },
 ];
 
@@ -23,7 +59,7 @@ export default function HomeScreen() {
   return (
     <View style={styles.container}>
 
-      <ChatBot steps={steps} />
+      <ChatBot steps={steps} keyboardVerticalOffset={85}/>
         
 
     </View>
