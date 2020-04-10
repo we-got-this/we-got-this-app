@@ -5657,16 +5657,6 @@ react-is@^16.12.0, react-is@^16.13.0, react-is@^16.7.0, react-is@^16.8.1, react-
     random-id "1.0.3"
     react-native-three-dots-loader "^1.0.1"
 
-react-native-chatbot@^0.0.1-alpha.12:
-  version "0.0.1-alpha.12"
-  resolved "https://registry.yarnpkg.com/react-native-chatbot/-/react-native-chatbot-0.0.1-alpha.12.tgz#e201f7a9485ffda48e5498dbfb25f6da121c4e13"
-  integrity sha512-LN0Z0kVp6cJ1+0w5nqvuEexv3nGgthanP6hqEms5nHGZ8MTkUh6LhI3GGHhQZdOLz4lommCZDwuVqm8CLFMTrQ==
-  dependencies:
-    lodash "^4.17.4"
-    prop-types "^15.5.10"
-    random-id "1.0.3"
-    react-native-loader "^1.1.0"
-
 react-native-gesture-handler@~1.6.0:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-1.6.1.tgz#678e2dce250ed66e93af409759be22cd6375dd17"
@@ -5681,11 +5671,6 @@ react-native-iphone-x-helper@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.2.1.tgz#645e2ffbbb49e80844bb4cbbe34a126fda1e6772"
   integrity sha512-/VbpIEp8tSNNHIvstuA3Swx610whci1Zpc9mqNkqn14DkMbw+ORviln2u0XyHG1kPvvwTNGZY6QpeFwxYaSdbQ==
-
-react-native-loader@^1.1.0:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/react-native-loader/-/react-native-loader-1.2.1.tgz#e08589a89cfcd076595b9301c1d618f54da73329"
-  integrity sha1-4IWJqJz80HZZW5MBwdYY9U2nMyk=
 
 react-native-safe-area-context@0.7.3:
   version "0.7.3"
