@@ -53,5 +53,7 @@ function getHeaderTitle(route) {
       return 'WeGotThis!';
     case 'Links':
       return 'Links to learn more';
+    case 'Relax':
+      return 'Relax';
   }
 }
