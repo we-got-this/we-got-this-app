@@ -111,7 +111,7 @@ const steps = [
   },
   {
     id: '20',
-    message: 'Okay, thanks. You will receive a link to connect and chat and brighten someones day.',
+    message: 'Okay, thanks. You will receive a link to connect and chat and brighten someone\'s day.',
     trigger: '1',
   },
   {
