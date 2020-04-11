@@ -7,24 +7,10 @@ import { RectButton, ScrollView } from 'react-native-gesture-handler';
 export default function InsightsScreen() {
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-      <OptionButton
-        icon="md-school"
-        label="Read the Expo documentation"
-        onPress={() => WebBrowser.openBrowserAsync('https://docs.expo.io')}
-      />
-
-      <OptionButton
-        icon="md-compass"
-        label="Read the React Navigation documentation"
-        onPress={() => WebBrowser.openBrowserAsync('https://reactnavigation.org')}
-      />
-
-      <OptionButton
-        icon="ios-chatboxes"
-        label="Ask a question on the forums"
-        onPress={() => WebBrowser.openBrowserAsync('https://forums.expo.io')}
-        isLastOption
-      />
+      
+      <Text style={styles.text}>
+        Looks like we don't have any data from your chats yet, but we'll keep listening to what you say. When we notice something interesting about what you've told us, you'll see insights here – graphs of how much contact you have which certain people, and how that makes you feel, and perhaps some recommendations of who you should talk to next!
+      </Text>
     </ScrollView>
   );
 }
@@ -45,6 +31,9 @@ function OptionButton({ icon, label, onPress, isLastOption }) {
 }
 
 const styles = StyleSheet.create({
+  text: {
+    padding: 30,
+  }, 
   container: {
     flex: 1,
     backgroundColor: '#fafafa',
