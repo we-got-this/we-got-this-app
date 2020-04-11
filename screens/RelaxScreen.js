@@ -40,17 +40,18 @@ export default function RelaxScreen() {
         icon="md-compass"
         label="InkTober - 31 Day Drawing Challenge"
         onPress={() => WebBrowser.openBrowserAsync("https://inktober.com/")}
-        isLastOption
       />
 
-      {/* <OptionButton
+      <OptionButton
         icon="md-school"
         label="Some Daily Challenges for You"
         onPress={() =>
-          WebBrowser.openBrowserAsync("https://reactnavigation.org")
+          WebBrowser.openBrowserAsync(
+            "https://we-got-this-web.herokuapp.com/challenges"
+          )
         }
         isLastOption
-      /> */}
+      />
     </ScrollView>
   );
 }
