@@ -5,6 +5,7 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import RelaxScreen from '../screens/RelaxScreen';
+import InsightsScreen from '../screens/InsightsScreen';
 
 const BottomTab = createBottomTabNavigator();
 const INITIAL_ROUTE_NAME = 'Home';
@@ -23,6 +24,14 @@ export default function BottomTabNavigator({ navigation, route }) {
         options={{
           title: 'Chat',
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-chatbubbles" />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Insights"
+        component={InsightsScreen}
+        options={{
+          title: 'Insights',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-bulb" />,
         }}
       />
       <BottomTab.Screen
@@ -55,5 +64,7 @@ function getHeaderTitle(route) {
       return 'Links to learn more';
     case 'Relax':
       return 'Relax';
+    case 'Insights':
+      return 'Insights';
   }
 }
