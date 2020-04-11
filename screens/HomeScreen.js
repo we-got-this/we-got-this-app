@@ -14,7 +14,7 @@ const steps = [
   },
   {
     id: '1',
-    message: 'Name a friend or family member you spoke to recently',
+    message: 'How many friends have you spoken with recently?',
     trigger: '2',
   },
   {
@@ -24,44 +24,115 @@ const steps = [
   },
   {
     id: '3',
-    message: 'How did you feel after talking to them?',
+    message: 'What was one of their names?',
     trigger: '4',
   },
   {
     id: '4',
-    options: [
-      { value: 1, label: 'Great', trigger: '5' },
-      { value: 2, label: 'No different', trigger: '5' },
-      { value: 3, label: 'Depressed af', trigger: '5' },
-    ],
+    user: true,
+    trigger: '5',
   },
   {
     id: '5',
-    message: 'How do you think they felt after talking to you?',
+    message: 'How did you feel after talking to them?',
     trigger: '6',
   },
   {
     id: '6',
-    options: [
-      { value: 1, label: 'Great', trigger: '7' },
-      { value: 2, label: 'No different', trigger: '7' },
-      { value: 3, label: 'Depressed af', trigger: '7' },
-    ],
+    user: true,
+    trigger: '7',
   },
   {
     id: '7',
-    message: 'Okay, great.',
+    message: 'How do you think they felt?',
+    trigger: '8',
+  },
+  {
+      id: '8',
+      user: true,
+      trigger: '9',
+  },
+  
+  {
+    id: '9',
+    message: 'What is the name of another person you spoke to?',
+    trigger: '10',
+  },
+  {
+    id: '10',
+    user: true,
+    trigger: '11',
+  },
+  {
+    id: '11',
+    message: 'How did you feel after talking to them?',
+    trigger: '12',
+  },
+  {
+    id: '12',
+    user: true,
+    trigger: '13',
+  },
+  {
+    id: '13',
+    message: 'How do you think they felt?',
+    trigger: '14',
+  },
+  {
+    id: '14',
+    user: true,
+    trigger: '15',
+  },
+  {
+    id: '15',
+    message: "Would you like to chat with vulnerable people who've registered themselves as feeling isolated and wanting someone to talk to?",
+    trigger: '16',
+  },
+  {
+    id: '16',
+    options: [
+      { value: 1, label: 'Yes', trigger: '17' },
+      { value: 2, label: 'No', trigger: '18' },
+    ],
+  },
+  {
+    id: '17',
+    message: "Is there a particular group you'd like to help out?",
+    trigger: '19',
+  },
+  {
+    id: '19',
+    options: [
+      { value: 1, label: 'aged care residents', trigger: '20' },
+      { value: 2, label: 'people from overseas', trigger: '20' },
+      { value: 3, label: 'people living alone', trigger: '20' },
+      { value: 3, label: 'anyone who registered', trigger: '20' },
+    ],
+  },
+  {
+    id: '20',
+    message: 'Okay, thanks. You will receive a link to connect and chat and brighten someones day.',
     trigger: '1',
   },
+  {
+    id: '18',
+    message: 'No worries, keep connecting with friends and family.',
+    trigger: '1',
+  },
+  
 ];
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
 
-      <ChatBot steps={steps} keyboardVerticalOffset={85}/>
+      <ChatBot steps={steps} keyboardVerticalOffset={85}
+      botBubbleColor= {'#2D6DAB'}
+      optionBubbleColor = {'#D4C6E7'}
+      optionFontColor = {'#2D6DAB'}
+      userBubbleColor = {'#7CC9D9'}
+      userFontColor = {'#2D6DAB'}/>
         
-
     </View>
   );
 }
